@@ -12,19 +12,28 @@
          <p>Free Delivery & 40% Discount for next 3 orders place your 1st order in</p>
     </div>
     <header class='header'>
-        <p class='logo'>Freash</p>
-        <div class='headerOptions' >
-            <input placeholder='Search items'></input>
-            <div class="subOptions" id="menu">
-                <div class="closeSubOptions">
-                    <p id="closeMenu">X</p>
-                </div>
+        <div class="headerSearchBarSection">
+            <div class='headerLogo'>
+                <p >Freash</p>
+            </div>
+            <div class="SearchInput">
+                <input placeholder='Search items'></input>
+            </div>
+        </div>
+        <!-- <div class='headerOptions'> -->
+        <div class="subOptions" id="menu">
+            <div class="closeSubOptions">
+                <p id="closeMenu">X</p>
+            </div>
+            <div class="selectOption" id="menu">
                 <select placeholder="How do you want your items?">
                     <option>abc</option>
                     <option>abc</option>
                     <option>abc</option>
                     <option>abc</option>
                 </select>
+            </div>
+            <div class="list">
                 <ul>
                     <li>Reorder</li>
                     <li>add to card</li>
@@ -32,22 +41,19 @@
                 </ul>
             </div>
         </div>
+        <!-- </div> -->
         <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <img src="./images/menu.png">
         </button>
     </header>
-   <main class='mainSection'>
+    <main class='mainSection'>
         <div class='mainSectionBanner'>
-            <div class='mainSectionBannerImage'>
-                <img src='./images/banner1.png'/>
-            </div>
+            <img src='./images/banner1.png'/>
         </div> 
-        <div class='categories'>
+       <div class='categories'>
             <div class='categoriesTitle'>
-                <p class="categoriesTitleText">Categories</p>
-                <p class="viewAll">View All</p>
+                <p>Categories</p>
+                <p>View All</p>
             </div>
             <div class='categoriesItemSection'>
                 <div class='categoriesItem'>
@@ -67,7 +73,7 @@
                 </div>
             </div>
         </div> 
-        <div class='featuredProductSection'>
+         <!-- <div class='featuredProductSection'>
             <div class="featuredProductSectionTitle">
                 <p class="categoriesTitleText">Featured Products</p>
                 <p class='viewAll'>View All</p>
@@ -327,9 +333,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
-     <footer>
+     <!-- <footer>
         <div class='footerSection'>
             <div class='footerSectionLogo'>
                 <p>Freash</p>
@@ -347,7 +353,7 @@
                 </div>
             </div>
             <div class='footerSectionLinks'>
-                <div>
+                <div class="aboutUS">
                     <p>About US</p>
                     <ul>
                         <li>About us</li>
@@ -356,7 +362,7 @@
                         <li>About Team</li>
                     </ul>
                 </div>
-                <div>
+                <div class="ourInfo">
                     <p>Our Information</p>
                     <ul>
                         <li>privacy policy update</li>
@@ -365,7 +371,7 @@
                         <li>Site map</li>
                     </ul>
                 </div>
-                <div>
+                <div class="community">
                     <p>Community</p>
                     <ul>
                         <li>Announcement</li>
@@ -384,7 +390,7 @@
         <div class='footerSecondSection'>
             <p>copyright All Right Resereved</p>
         </div>
-    </footer>
+    </footer> -->
     <script src="index.js"></script>
 </body>
 </html>
