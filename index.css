@@ -149,7 +149,46 @@ html, body {
   color: grey;
 }
 
+.categoriesItemSection{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap:20px;
+  margin-bottom: 30px;
+}
+
+.categoriesItem{
+  max-width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.categoriesItem img{
+  height: 100%;
+  width: 100%;
+}
+
+.productSection{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px,1fr));
+  gap:20px;
+}
+
+.productSectionItems{
+  aspect-ratio: 9 / 14;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px){
+
+  .mainSection{
+    height: fit-content;
+  }
+
+  header{
+    position: relative;
+  }
    
   .headerSearchBarSection{
     justify-content: flex-start;
@@ -160,7 +199,7 @@ html, body {
     background-color: #252525;
     position: absolute;
     right: 0;
-    top: 56px;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -175,6 +214,12 @@ html, body {
     height: 30px;
     aspect-ratio: 1;
     background-color: #004c4e;
+    padding: 2px;
+  }
+
+  .hamburger img{
+    height: 100%;
+    width: 100%;
   }
 
   .closeSubOptions{
@@ -187,7 +232,6 @@ html, body {
 
   .subOptions.active{
     max-height: 300px !important;
-    
   }
 
   .subOptions .selectOption{
@@ -210,10 +254,22 @@ html, body {
     color: blue;
   }
 
+  .categoriesItemSection{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .productSection{
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
 }
 
 @media (max-width: 480px){
   .headerSearchBarSection .SearchInput{
     width: 100%;
+  }
+
+  .categoriesItemSection{
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
