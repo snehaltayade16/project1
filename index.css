@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  color: white;
+  color: black;
 }
 
 html, body {
   height:100vh;
   width: 100vw;
-  background-color: black;
   overflow: auto;
   scroll-behavior: smooth;
 }
@@ -22,10 +21,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:30px;
+  /* gap:30px; */
 }
 
-.headerLogo{
+.headerLogo p{
   font-size: 30px;
   flex: 0 0 auto;
   width: fit-content;
@@ -41,41 +40,82 @@ html, body {
   flex: 1;
 }
 
-.headerSearchBarSection .SearchInput{
-  width: 100%;
-  height: 100%;
+.SearchInput{
+  position: relative;
+  align-items: center;
+  display: inline-block;
+  width: 40%;
 }
 
-.headerSearchBarSection .SearchInput input{
+.SearchInput input{
   width: 100%;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 50px;
+  border: 1px solid #dadada;
 }
 
+.searchIcon{
+ position: absolute;
+ right: 10px;
+ top: 4px;
+ height: 30px;
+ aspect-ratio: 1;
+ border-radius: 50px;
+ color: white;
+ font-size: 16px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #004c4e;
+
+}
 
 .subOptions{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.subOptions .list ul{
-  list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .subOptions .list{
-  width: 50%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
-.subOptions .list ul li{
+/* .subOptions .list{
+  width: 50%;
+} */
+
+.subOptions .list li{
   /* margin-inline: 30px; */
-  padding-inline: 10px;
+  padding-inline: 20px;
   white-space: nowrap;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.subOptions .list li:last-child{
+  /* margin-inline: 30px; */
+  padding-right: 0px;
+}
+
+.subOptions .list li .listIcon{
+  margin-right: 6px;
+}
+
+.subOptions .list li div p:first-child{
+  color: grey;
+  font-size: 13px;
+  line-height: 14px;
+}
+
+.subOptions .list li div p:nth-child(2){
+  color: black;
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 600;
 }
 
  .subOptions .list ul li:hover{
@@ -86,14 +126,20 @@ html, body {
   display: none;
 }
 
-.subOptions .selectOption{
-  width: 50%;
+.selectOption{
+  width: 20%;
 }
 
-.subOptions .selectOption select{
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
+.selectOption select{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #efefef;
+}
+
+option[value=""] {
+  color: gray;
 }
 
 
