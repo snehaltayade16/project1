@@ -13,32 +13,38 @@
     </div>
     <header class='header'>
         <div class="headerLogo">
-            <p>freash</p>
+            <p>Freash</p>
         </div>
-        <div class="SearchInput">
+        <div class="SearchInput" id="searchInputId">
             <input placeholder="Search..." />
-            <p class="searchIcon">@</p>
+            <div class="searchIcon">
+               <img src="./images/search-interface-symbol.png"  id="a"></img>
+            </div>
+            
         </div>
-        <div class="selectOption">
-            <select>
-                <option value="" disabled selected hidden>How do you want your item?</option>
-            </select>
-        </div>
-        <div class="subOptions">
+        <div class="subOptions" id="menu">
+            <div class="closeMenu" id="closeMenu">
+                <img src="./images/close.png"></img>
+            </div>
+            <div class="selectOption">
+                <select>
+                    <option value="" disabled selected hidden>How do you want your item?</option>
+                </select>
+            </div>
             <ul class="list">
                 <li class="">
-                    <p class="listIcon">@</p>
+                    <img class="listIcon" src="./images/shopping-cart.png"/>
                     <div>
                         <p>Reorder</p>
                         <p>My Items</p>
                     </div>
                 </li>
                 <li>
-                    <p class="listIcon">@</p>
+                    <img class="listIcon" src="./images/avatar.png"></img>
                     <div><p>Sign in</p><p>Account</p></div>
                 </li>
                 <li>
-                    <p class="listIcon">@</p>
+                    <img class="listIcon" src="./images/heart.png"></img>
                     <div><p>Sign in</p><p>$00.00</p></div>
                 </li>
             </ul>
@@ -47,10 +53,11 @@
         <button class="hamburger" id="hamburger">
             <img src="./images/menu.png">
         </button>
+        <div class="overlay" id="overlay"></div>
     </header>
     <main class='mainSection'>
         <div class='mainSectionBanner'>
-            <!-- <img src='./images/banner1.png'/> -->
+            <img src='./images/banner1.png'/>
         </div> 
        <div class='categories'>
             <div class='categoriesTitle'>
@@ -58,7 +65,7 @@
                 <p>View All</p>
             </div>
             <div class='categoriesItemSection'>
-                <!-- <div class='categoriesItem'>
+                <div class='categoriesItem'>
                     <img src='./images/meatAndSeafood.png'/>
                 </div>
                 <div class='categoriesItem'>
@@ -72,7 +79,7 @@
                 </div>
                 <div class='categoriesItem'>
                     <img src='./images/dairy.png'/>
-                </div> -->
+                </div>
             </div>
         </div> 
         <div class='featuredProductSection'>

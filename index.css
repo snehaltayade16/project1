@@ -43,8 +43,10 @@ html, body {
 .SearchInput{
   position: relative;
   align-items: center;
-  display: inline-block;
+  display: flex;
+  justify-content: flex-end;
   width: 40%;
+  margin:0px 10px 0px 0px;
 }
 
 .SearchInput input{
@@ -56,8 +58,7 @@ html, body {
 
 .searchIcon{
  position: absolute;
- right: 10px;
- top: 4px;
+ right: 4px;;
  height: 30px;
  aspect-ratio: 1;
  border-radius: 50px;
@@ -68,6 +69,10 @@ html, body {
  justify-content: center;
  background-color: #004c4e;
 
+}
+
+.searchIcon img{
+  height: 14px;
 }
 
 .subOptions{
@@ -103,6 +108,7 @@ html, body {
 
 .subOptions .list li .listIcon{
   margin-right: 6px;
+  height: 20px;
 }
 
 .subOptions .list li div p:first-child{
@@ -127,8 +133,9 @@ html, body {
 }
 
 .selectOption{
-  width: 20%;
+  width: 40%;
 }
+
 
 .selectOption select{
     border: none;
@@ -158,13 +165,17 @@ option[value=""] {
   display: none;
 }
 
+.closeMenu{
+  display: none;
+}
+
 .mainSection{
   height: 100%;
   padding: 10px 20px;
 }
 
 .mainSectionBanner{
-  height: 30vh;
+  height: 50vh;
   border-radius: 5px;
   overflow: hidden;
   background-color: #004c4e;
@@ -172,7 +183,7 @@ option[value=""] {
 }
 
 .mainSectionBanner img{
-  height: 30vh;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
@@ -228,13 +239,27 @@ option[value=""] {
 
 @media (max-width: 768px){
 
+  .overlay{
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .overlay.overlayActive{
+    visibility: visible;
+    opacity: 1;
+  }
+
   .mainSection{
     height: fit-content;
   }
 
-  header{
+  /* header{
     position: relative;
-  }
+  } */
    
   .headerSearchBarSection{
     justify-content: flex-start;
@@ -242,7 +267,7 @@ option[value=""] {
 
   .subOptions{
     width:100%;
-    background-color: #252525;
+    background-color: white;
     position: absolute;
     right: 0;
     top: 0;
@@ -253,14 +278,30 @@ option[value=""] {
     max-height:0;
     overflow: hidden;
     transition: all ease-in 500ms;
+    z-index: 1;
+    border-bottom-right-radius: 22px;
+    border-bottom-left-radius: 22px;
   }
 
   .hamburger{
     display: block;
     height: 30px;
     aspect-ratio: 1;
-    background-color: #004c4e;
-    padding: 2px;
+    background-color: white;
+    border: none;
+    margin: 0px 0px 0px 10px;
+  }
+
+  .closeMenu{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .closeMenu img{
+    height: 14px;
   }
 
   .hamburger img{
@@ -275,29 +316,63 @@ option[value=""] {
     margin-bottom: 10px;
     padding: 10px;
   }
+  
+  .SearchInput{
+    margin: 0;
+  }
+
+  .selectOption select{
+    background-color: white;
+    color: grey;
+    font-size: 15px;
+    padding: 0px;
+  }
 
   .subOptions.active{
     max-height: 300px !important;
+    opacity: 1;
   }
 
   .subOptions .selectOption{
     width: 100%;
-    padding: 10px;
+    padding: 20px;
   }
 
-  .subOptions .list ul{
-    display: flex;
+ 
+
+  .subOptions  ul{
+    display: block;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-inline: 20px;
   }
 
-  .subOptions .list ul li{
-    margin: 10px 0px 0px 0px;
+  .subOptions  ul li{
+    margin: 20px 0px 0px 0px;
+  }
+
+  .subOptions  ul li div{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .subOptions .list li div p:first-child{
+    margin-right: 5px;
+  }
+
+  .subOptions .list li div p:nth-child(2){
+    color: grey;
+    font-size: 13px;
+    font-weight: 100;
   }
 
   .subOptions .list ul li:hover{
     color: blue;
+  }
+
+  .subOptions .list li .listIcon{
+    height: 17px;
   }
 
   .categoriesItemSection{
@@ -311,6 +386,11 @@ option[value=""] {
 }
 
 @media (max-width: 480px){
+/* */
+  .headerSubTitle p{
+    font-size: 12px;
+  }
+
   .headerSearchBarSection .SearchInput{
     width: 100%;
   }
@@ -318,4 +398,36 @@ option[value=""] {
   .categoriesItemSection{
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+
+   .SearchInput{
+    width: 50%;
+    margin: 0;
+  }
+
+  .SearchInput input{
+    width: 0;
+    opacity: 0;
+    border: none;
+    transition: all ease-in 500ms;
+  }
+
+  .enlarge input{
+    opacity: 1;
+    width: 100%;
+    border: 1px solid #dadada;
+    
+  }
+
+  .mainSectionBanner{
+    height: 70vh;
+  }
+  
+  .categoriesTitle p:first-child{
+    font-size: 20px;
+  }
+  
+  .categoriesItemSection {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
 }
