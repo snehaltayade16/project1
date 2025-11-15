@@ -517,7 +517,7 @@ option[value=""] {
     height: 100%;
     object-fit: contain;
     place-content: center;
-    border: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
 }
 
 .onSellProductSectionProductSecondSectionImage img{
@@ -584,6 +584,88 @@ footer{
     height: 50vh;
     padding: 20px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerSection{
+  display: flex;
+  gap:10px;
+  height: 100%;
+  align-items: center;
+}
+
+.footerSectionLogo{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+.footerSectionLogo p:first-child{
+  font-size: 40px;
+  color: white;
+}
+
+.footerTextColor{
+  color: #91c1c7;
+  font-size: 13px;
+}
+
+.listStyleNone{
+  list-style: none;
+}
+
+.linkHeading{
+  font-size: 15px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.mb-5{
+  margin-bottom: 5px;
+}
+
+.footerSectionSocialMediaIcon{
+  display: flex;
+  gap:10px;
+}
+
+.logo{
+  height: 30px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 50px;
+}
+
+.logo img{
+  height: 20px;
+}
+  
+.footerSectionLinks{
+  display: flex;
+  gap:30px;
+}
+
+.newslater input{
+  border: 1px solid white;
+  border-radius: 50px;
+  background-color: #004c4e;
+  padding: 10px;
+  margin-top:10px;
+}
+
+.footerSecondSection{
+  width: 100%;
+   border-top: 1px solid white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 10px;
 }
 
 @media (max-width: 768px){
